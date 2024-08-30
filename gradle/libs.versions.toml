@@ -1,0 +1,101 @@
+[versions]
+# AGP
+agp = "8.5.2"
+# Kotlin
+kotlin = "2.0.20"
+kotlin-dsl = "5.1.0"
+# KotlinX
+kotlinx-collections-immutable = "0.3.7"
+kotlinx-datetime = "0.6.0-RC.2"
+kotlinx-coroutines = "1.9.0-RC.2"
+kotlinx-serialization-json = "1.7.1"
+# AndroidX
+androidx-core = "1.13.1"
+androidx-activity = "1.9.1"
+androidx-fragment = "1.8.2"
+androidx-appcompat = "1.7.0"
+androidx-material = "1.12.0"
+androidx-navigation = "2.7.7"
+androidx-browser = "1.8.0"
+# Kirich1409
+kirich1409-viewbindingpropertydelegate = "1.5.9"
+# Coil
+coil = "2.4.0"
+# Squareup
+squareup-retrofit = "2.11.0"
+squareup-okhttp3 = "4.12.0"
+# Koin
+koin = "3.5.6"
+[libraries]
+# AGP
+agp-tools-gradle = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+
+# Kotlin
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+
+# Kotlinx
+kotlinx-collections-immutable = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlinx-collections-immutable" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinx-datetime" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
+
+# AndroidX
+androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core" }
+androidx-activity = { group = "androidx.activity", name = "activity-ktx", version.ref = "androidx-activity" }
+androidx-fragment = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "androidx-fragment" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+androidx-material = { group = "com.google.android.material", name = "material", version.ref = "androidx-material" }
+androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "androidx-navigation" }
+androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "androidx-navigation" }
+androidx-browser = { group = "androidx.browser", name = "browser", version.ref = "androidx-browser" }
+
+# Coil
+coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+coil-svg = { group = "io.coil-kt", name = "coil-svg", version.ref = "coil" }
+
+# kirich1409
+kirich1409-viewbindingpropertydelegate-noreflection = { group = "com.github.kirich1409", name = "viewbindingpropertydelegate-noreflection", version.ref = "kirich1409-viewbindingpropertydelegate" }
+
+# Squareup
+squareup-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "squareup-retrofit" }
+squareup-retrofit-converter-kotlinx-serialization = { group = "com.squareup.retrofit2", name = "converter-kotlinx-serialization", version.ref = "squareup-retrofit" }
+squareup-okhttp3-okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "squareup-okhttp3" }
+squareup-okhttp3-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "squareup-okhttp3" }
+
+# Koin
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android-compat", version.ref = "koin" }
+koin-android-navigation = { group = "io.insert-koin", name = "koin-androidx-navigation", version.ref = "koin" }
+[bundles]
+# AndroidX
+androidx-ui = ["androidx-core", "androidx-activity", "androidx-fragment", "androidx-appcompat", "androidx-material", "androidx-navigation-fragment", "androidx-navigation-ui", "androidx-browser", "kirich1409-viewbindingpropertydelegate-noreflection", "coil", "coil-svg"]
+# Squareup | Retrofit
+squareup-retrofit = ["squareup-okhttp3-okhttp", "squareup-okhttp3-logging-interceptor", "squareup-retrofit", "squareup-retrofit-converter-kotlinx-serialization"]
+
+# KotlinX
+kotlinx-core = ["kotlinx-collections-immutable", "kotlinx-datetime", "kotlinx-serialization-json", "kotlinx-coroutines-core"]
+kotlinx-android = ["kotlinx-collections-immutable", "kotlinx-datetime", "kotlinx-serialization-json", "kotlinx-coroutines-core", "kotlinx-coroutines-android"]
+
+# Koin
+koin-android = ["koin-core", "koin-android", "koin-android-navigation"]
+[plugins]
+# Convention Plugins
+githubapi-library-kotlin = { id = "com.presidentServiceConsult.githubAPI.library.kotlin" }
+githubapi-library-android = { id = "com.presidentServiceConsult.githubAPI.library.android" }
+# Java
+java-library = { id = "java-library" }
+
+# AGP
+agp-application = { id = "com.android.application", version.ref = "agp" }
+agp-library = { id = "com.android.library", version.ref = "agp" }
+
+# Kotlin
+kotlin-dsl = { id = "org.gradle.kotlin.kotlin-dsl", version.ref = "kotlin-dsl" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-parcelize = { id = "kotlin-parcelize" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+# AndroidX
+androidx-navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "androidx-navigation" }

@@ -1,0 +1,2 @@
+[versions]
+kotlin-jvm-target = "19"

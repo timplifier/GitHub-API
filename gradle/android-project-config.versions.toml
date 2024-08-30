@@ -1,0 +1,7 @@
+[versions]
+build-namespace = "com.presidentServiceConsult.githubAPI"
+sdk-min = "24"
+sdk-compile = "34"
+sdk-target = "34"
+build-type-debug = "debug"
+build-type-release = "release"

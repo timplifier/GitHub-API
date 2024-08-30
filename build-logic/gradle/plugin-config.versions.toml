@@ -1,0 +1,3 @@
+[versions]
+kotlin-library = "com.presidentServiceConsult.githubAPI.buildLogic.conventions.plugins.KotlinLibraryPlugin"
+android-library = "com.presidentServiceConsult.githubAPI.buildLogic.conventions.plugins.AndroidLibraryPlugin"

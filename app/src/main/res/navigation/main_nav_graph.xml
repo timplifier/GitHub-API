@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    tools:ignore="InvalidNavigation">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.presidentServiceConsult.githubAPI.presentation.ui.fragments.auth.SignInFragment"
+        android:label="SignInFragment"
+        tools:layout="@layout/fragment_sign_in">
+
+        <action
+            android:id="@+id/toMainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/signInFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.presidentServiceConsult.githubAPI.presentation.ui.fragments.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/toRepositoryDetailsFragment"
+            app:destination="@id/repositoryDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/repositoryDetailsFragment"
+        android:name="com.presidentServiceConsult.githubAPI.presentation.ui.fragments.main.repositoryDetails.RepositoryDetailsFragment"
+        android:label="RepositoryDetailsFragment"
+        tools:layout="@layout/fragment_repository_details">
+
+        <action
+            android:id="@+id/toRepositoryDetailsFragment"
+            app:destination="@id/repositoryDetailsFragment" />
+
+        <argument
+            android:name="repositoryDetails"
+            app:argType="com.presidentServiceConsult.githubAPI.presentation.models.RepositoryDetails" />
+    </fragment>
+</navigation>
